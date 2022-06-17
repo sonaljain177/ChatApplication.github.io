@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+
+            background: url("https://media.istockphoto.com/photos/light-blue-paper-canvas-surface-texture-background-picture-id1027164586?k=20&m=1027164586&s=170667a&w=0&h=XAwD2eTf13apT7pTq8p-awGjNr8EM0JRb1ubcFH0gzE=");
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-size: cover;
+            overflow:hidden;
+        }
+        .box {
+            left:180%;
+            top:70%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 1;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            max-width: 50%;
+            max-height: 50%;
+            padding: 50px 50px;
+            font-size: 15px;
+        }
+        .container {
+            position:center;
+            display: flex;
+            justify-content: center;
+            left:10%;
+            height: 80%;
+            width: 100%;
+            padding-top:10%;
+        }
+    </style>
+</head>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body{ 
+            font: 14px sans-serif;
+        }
+        .wrapper{ 
+            width: 350px; 
+            padding: 20px; 
+            background-color: white;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); }
+    </style>
+    </head>
+<body>
+<div id="loginform">
+      <div class="container">
+        <div class="box">
+        <script>
+            function validateform()
+            {
+                var name = document.forms["UserNameForm"]["Name"];
+                if (name.value == "")
+                {
+                    alert("Please enter your name.");
+                    name.focus();
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            </script>
+
+      <form name="UserNameForm" action="chatroom.html" method="get" onsubmit="return validateform()">
+        <div>
+                <label style="color: azure">Fill in your name to enter the chat room</label>
+                <p>
+                </p>
+                <input type="text" name="Name" id="name" class="form-control">
+                <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+                <button class="btn btn-primary">Submit</button>
+        </div>
+      </form> 
+      </div>
+    </div>
+</div>
+</body>
+</html>
